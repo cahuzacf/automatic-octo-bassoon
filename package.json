@@ -1,40 +1,56 @@
 {
-    "name": "automatic-octo-bassoon",
-    "version": "0.0.2",
-    "description": "A cool module that does things",
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/cahuzacf/automatic-octo-bassoon.git"
-    },
-    "main": "./dist/index.js",
-    "types": "./dist/index.d.ts",
-    "scripts": {
-        "test": "node ./dist/test",
-        "tsc": "npx tsc",
-        "cdn:bundle:.js": "simplifyify dist/index.js -s automatic_octo_bassoon -o dist/umd_bundle.js --debug --bundle",
-        "cdn:bundle:.min.js": "terser dist/umd_bundle.js -cmo dist/umd_bundle.min.js",
-        "cdn:bundle": "npm run cdn:bundle:.js && npm run cdn:bundle:.min.js",
-        "cdn:esm": "tsc -p tsconfig.esm.json",
-        "cdn": "npm run cdn:bundle && npm run cdn:esm",
-        "build": "npm run tsc && npm run cdn",
-        "enable_short_import_path": "npm run build && npx denoify_enable_short_npm_import_path",
-        "clean": "rm -rf node_modules dist"
-    },
-    "author": "u/cahuzacf",
-    "license": "MIT",
-    "files": [
-        "/dist/*.{d.ts,js,js.map}",
-        "/dist/tools/",
-        "/dist/zz_esm/"
-    ],
-    "keywords": [],
-    "homepage": "https://github.com/cahuzacf/automatic-octo-bassoon",
-    "devDependencies": {
-        "@types/node": "^10.0.0",
-        "denoify": "github:garronej/denoify",
-        "evt": "^1.6.8",
-        "simplifyify": "^8.0.1",
-        "terser": "^4.6.10",
-        "typescript": "^3.9.2"
-    }
+  "name": "automatic-octo-bassoon",
+  "version": "0.0.2",
+  "description": "A cool module that does things",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cahuzacf/automatic-octo-bassoon.git"
+  },
+  "main": "index.js",
+  "types": "index.d.ts",
+  "author": "u/cahuzacf",
+  "license": "MIT",
+  "files": [
+    "index.d.ts",
+    "index.js",
+    "index.js.map",
+    "myFunction.d.ts",
+    "myFunction.js",
+    "myFunction.js.map",
+    "myObject.d.ts",
+    "myObject.js",
+    "myObject.js.map",
+    "umd_bundle.js",
+    "umd_bundle.js.map",
+    "umd_bundle.min.js",
+    "tools/getProjectRoot.d.ts",
+    "tools/getProjectRoot.js",
+    "tools/getProjectRoot.js.map",
+    "tools/toUpperCase.d.ts",
+    "tools/toUpperCase.js",
+    "tools/toUpperCase.js.map",
+    "zz_esm/index.d.ts",
+    "zz_esm/index.js",
+    "zz_esm/index.js.map",
+    "zz_esm/myFunction.d.ts",
+    "zz_esm/myFunction.js",
+    "zz_esm/myFunction.js.map",
+    "zz_esm/myObject.d.ts",
+    "zz_esm/myObject.js",
+    "zz_esm/myObject.js.map",
+    "zz_esm/tools/toUpperCase.d.ts",
+    "zz_esm/tools/toUpperCase.js",
+    "zz_esm/tools/toUpperCase.js.map",
+    "zz_esm/tsconfig.esm.tsbuildinfo"
+  ],
+  "keywords": [],
+  "homepage": "https://github.com/cahuzacf/automatic-octo-bassoon",
+  "devDependencies": {
+    "@types/node": "^10.0.0",
+    "denoify": "github:garronej/denoify",
+    "evt": "^1.6.8",
+    "simplifyify": "^8.0.1",
+    "terser": "^4.6.10",
+    "typescript": "^3.9.2"
+  }
 }
